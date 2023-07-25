@@ -1,0 +1,48 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-primary">View Movie</p>
+            <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit hic numquam quibusdam, dignissimos, 
+                distinctio perspiciatis ipsa dolore iure fugit voluptates nulla adipisci. 
+                Nam voluptas laboriosam impedit et sequi voluptatem nostrum.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-sm-4">
+            <img [src]="movie.image" class="movie-img-big">
+        </div>
+        <div class="col-sm-6">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary">Film Title : <span class="fw-bold">{{movie.title}}</span></li>
+                <li class="list-group-item list-group-item-primary">Release Year : <span class="fw-bold">{{movie.release_year}}</span></li>
+                <li class="list-group-item list-group-item-primary">Genre : <span class="fw-bold">{{movie.genre}}</span></li>
+                <li class="list-group-item list-group-item-primary">Director : <span class="fw-bold">{{movie.director}}</span></li>
+                <li class="list-group-item list-group-item-primary">Writers : <span class="fw-bold">{{movie.writers}}</span></li>
+                <li class="list-group-item list-group-item-primary">Actors : <span class="fw-bold">{{movie.actors}}</span></li>
+                <li class="list-group-item list-group-item-primary">Plot : <span class="fw-bold">{{movie.plot}}</span></li>
+                <li class="list-group-item list-group-item-primary">Rating : <span class="fw-bold">{{movie.rating}}</span></li>
+                <li class="list-group-item list-group-item-primary">Time : <span class="fw-bold">{{movie.runtime_minutes}}</span></li>
+                <li class="list-group-item list-group-item-primary">Languages : <span class="fw-bold">{{movie.languages}}</span></li>
+                <li class="list-group-item list-group-item-primary">Subtitles : <span class="fw-bold">{{movie.subtitles}}</span></li>
+                <li class="list-group-item list-group-item-primary" >Awards : <span class="fw-bold">
+                    <ul class="list-group" *ngFor="let award of awards">
+                        <li class="list-group-item list-group-item-primary">Award Title : <span class="fw-bold">{{award.name}}</span></li>
+                        <li class="list-group-item list-group-item-primary">Year : <span class="fw-bold">{{award.year}}</span></li>
+                        <li class="list-group-item list-group-item-primary">Organization : <span class="fw-bold">{{award.organization}}</span></li>
+                    </ul>
+                </span></li>
+            </ul>
+        </div>
+    </div>
+    <pre>{{movie.awards}}</pre>
+    <div class="row">
+        <div class="col">
+            <a routerLink="/" class="btn btn-primary mt-3"> <i class="fa fa-arrow-alt-circle-left"></i>Back</a>
+        </div>
+    </div>
+</div>

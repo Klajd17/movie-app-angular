@@ -1,0 +1,66 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-primary fw-bold">Movies List
+                <a class="btn btn-primary btn-sm" routerLink="/movies/add">
+                    <i class="fa fa-plus-circle"></i> New
+                </a>
+            </p>
+            <p class="fw-italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Libero, quam? Molestias quo quod beatae iusto veniam corporis iure nesciunt optio, 
+                 doloremque atque? Assumenda perspiciatis minus reprehenderit suscipit? Accusantium, 
+                 cupiditate recusandae.
+            </p>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Search Movie">
+                            </div>
+                            <div class="col">
+                                <input type="submit" class="btn btn-outline-dark" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3" *ngIf="movies">
+    <div class="row">
+        <div class="card m-3" style="width: 18rem;" *ngFor="let movie of movies">
+            <img class="card-img-top" [src]="movie.image" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{movie.title}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Release Year: {{movie.release_year}}</li>
+                <li class="list-group-item">Rating: {{movie.rating}}</li>
+                <li class="list-group-item">Languages: {{movie.languages}}</li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a routerLink="/movies/view/{{movie.id}}" class="btn btn-warning btn-block">
+                                <i class="fa fa-eye"></i> View
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a routerLink="/movies/edit/{{movie.id}}" class="btn btn-primary btn-block">
+                                <i class="fa fa-pen"></i> Edit
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-danger btn-block" (click)="deleteMovie(movie.id)">
+                                <i class="fa fa-trash-alt"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+          </div>
+    </div>
+</div>
+

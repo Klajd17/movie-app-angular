@@ -1,0 +1,202 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Movie",
+      "release_year": 2023,
+      "genre": "Action",
+      "director": "John Director",
+      "writers": [
+        "Writer A",
+        "Writer B"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKF6g2LFTPTqBq3ijelkGo-VSm0sVmEljY_g&usqp=CAU",
+      "actors": [
+        "Actor X",
+        "Actress Y",
+        "Actor Z"
+      ],
+      "plot": "A thrilling action-packed adventure of heroes saving the world from impending doom.",
+      "rating": 7.8,
+      "runtime_minutes": 120,
+      "languages": [
+        "English",
+        "French"
+      ],
+      "subtitles": [
+        "English",
+        "French",
+        "Spanish"
+      ],
+      "awards": [
+        {
+          "name": "Best Action Movie",
+          "year": 2024,
+          "organization": "Movie Awards Academy"
+        },
+        {
+          "name": "Best Visual Effects",
+          "year": 2024,
+          "organization": "Special Effects Guild"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Drama 2022",
+      "release_year": 2022,
+      "genre": "Drama",
+      "director": "Jane Director",
+      "writers": [
+        "Writer C",
+        "Writer D"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKF6g2LFTPTqBq3ijelkGo-VSm0sVmEljY_g&usqp=CAU",
+      "actors": [
+        "Actor A",
+        "Actress B",
+        "Actor C"
+      ],
+      "plot": "A heart-wrenching story of love, loss, and redemption.",
+      "rating": 8.5,
+      "runtime_minutes": "146",
+      "languages": [
+        "English"
+      ],
+      "subtitles": [
+        "English",
+        "Spanish"
+      ],
+      "awards": [
+        {
+          "name": "Best Drama",
+          "year": 2023,
+          "organization": "Drama Awards Association"
+        },
+        {
+          "name": "Best Actress",
+          "year": 2023,
+          "organization": "Acting Guild"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Comedy",
+      "release_year": 2021,
+      "genre": "Comedy",
+      "director": "Chris Director",
+      "writers": [
+        "Writer E",
+        "Writer F"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKF6g2LFTPTqBq3ijelkGo-VSm0sVmEljY_g&usqp=CAU",
+      "actors": [
+        "Actor P",
+        "Actress Q",
+        "Actor R"
+      ],
+      "plot": "A hilarious adventure of mishaps and laughter.",
+      "rating": 7.2,
+      "runtime_minutes": 105,
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "subtitles": [
+        "English",
+        "Spanish"
+      ],
+      "awards": []
+    },
+    {
+      "id": 4,
+      "title": "The Sci-Fi",
+      "release_year": 2024,
+      "genre": "Science Fiction",
+      "director": "Sam Director",
+      "writers": [
+        "Writer G",
+        "Writer H"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKF6g2LFTPTqBq3ijelkGo-VSm0sVmEljY_g&usqp=CAU",
+      "actors": [
+        "Actor M",
+        "Actress N",
+        "Actor O"
+      ],
+      "plot": "An epic journey through time and space.",
+      "rating": 8,
+      "runtime_minutes": 150,
+      "languages": [
+        "English"
+      ],
+      "subtitles": [
+        "English",
+        "French"
+      ],
+      "awards": [
+        {
+          "name": "Best Visual Design",
+          "year": 2025,
+          "organization": "Sci-Fi Awards Committee"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Comedy",
+      "release_year": 2020,
+      "genre": "Comedy",
+      "director": "Chris Director",
+      "writers": [
+        "Writer E",
+        "Writer F"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKF6g2LFTPTqBq3ijelkGo-VSm0sVmEljY_g&usqp=CAU",
+      "actors": [
+        "Actor P",
+        "Actress Q",
+        "Actor R"
+      ],
+      "plot": "A hilarious adventure of mishaps and laughter.",
+      "rating": 7.8,
+      "runtime_minutes": 103,
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "subtitles": [
+        "English",
+        "Spanish"
+      ],
+      "awards": []
+    }
+  ],
+  "signupUsers": [
+    {
+      "id": 1,
+      "fullname": "test24",
+      "email": "test@gmail.com",
+      "mobile": 543543,
+      "password": "3333333333345555",
+      "check": true
+    },
+    {
+      "id": 2,
+      "fullname": "test34",
+      "email": "test1234@gmail.com",
+      "mobile": 432,
+      "password": "test123",
+      "check": true
+    },
+    {
+      "id": 3,
+      "fullname": "test123",
+      "email": "test123",
+      "mobile": 123,
+      "password": "test123",
+      "check": null
+    }
+  ]
+}

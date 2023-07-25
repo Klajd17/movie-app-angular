@@ -1,0 +1,72 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-primary">Update Movie</p>
+            <p class="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit hic numquam quibusdam, dignissimos, 
+                distinctio perspiciatis ipsa dolore iure fugit voluptates nulla adipisci. 
+                Nam voluptas laboriosam impedit et sequi voluptatem nostrum.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form [formGroup]="editForm">
+                <div class="mb-2">
+                    <input type="text" name="title" class="form-control" formControlName="title" placeholder="Movie Title" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="release_year" class="form-control" formControlName="release_year" placeholder="Release Year" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="genre" class="form-control" formControlName="genre" placeholder="Genre" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="writers" class="form-control" formControlName="writers" placeholder="Writers" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="actors" class="form-control" formControlName="actors" placeholder="Actors" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="plot" class="form-control" formControlName="plot" placeholder="Plot" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="rating" class="form-control" formControlName="rating" placeholder="Rating" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="runtime_minutes" class="form-control" formControlName="runtime_minutes" placeholder="Time" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="languages" class="form-control" formControlName="languages" placeholder="Languages" required="true">
+                </div>
+                <div class="mb-2">
+                    <input type="text" name="subtitles" class="form-control" formControlName="subtitles" placeholder="Subtitles" required="true">
+                </div>
+                <div class="mb-4">
+                    <h3>Awards</h3>
+                    <!--<div *ngFor="let award of awards; let i = index" class="mb-2">-->
+                   <!-- <div class="mb-2">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="name" formControlName="name" class="form-control" placeholder="Award Name"  required>
+                            </div>
+                            <div class="col">
+                                <input type="number" name="year" formControlName="year" class="form-control" placeholder="Year"  required>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="awardsOrganization" formControlName="" class="form-control" placeholder="Organization" required>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            
+                <!-- Submit Button -->
+                <div class="mb-2">
+                    <button type="submit" class="btn btn-success" (click)="editMovie()">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
