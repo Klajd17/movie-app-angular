@@ -54,4 +54,10 @@ export class MoviesService {
     let dataUrl : string = `${MoviesService.serverUrl}/movies/${id}`;
     return this.httpClient.delete<IMovies>(dataUrl).pipe(catchError(this.handleError))
   }
+
+  public getSearchMovie(term: string): Observable<IMovies[]> {
+    const url = `${MoviesService.serverUrl}/movies?q=${term}`;
+    return this.httpClient.get<IMovies[]>(url);
+  }
+
 }

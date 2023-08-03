@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { IAwards } from 'src/app/models/IAwards';
 import { IMovies } from 'src/app/models/IMovies';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -11,13 +13,26 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class ListMovieComponent implements OnInit {
 
   public movies : IMovies[] = [];
+  public searchMovies : IMovies[] = [];
   public awards : IAwards[] = [];
 
-  constructor(private movieservice: MoviesService) { }
+  searchForm : FormGroup = new FormGroup({});
+
+  constructor(private formBuilder: FormBuilder, private movieservice: MoviesService) {
+    this.searchForm = this.formBuilder.group({
+      term: [''] // Set an initial value for the search term
+    });
+  }
 
   ngOnInit(): void {
     this.getAllMoviesFromServer()
     this.getAllAwardsFromServer()
+  }
+
+  initSearchForm(){
+    this.searchForm= this.formBuilder.group({
+      term: new FormControl(null)
+    }) 
   }
 
   public getAllMoviesFromServer(){
@@ -52,6 +67,17 @@ export class ListMovieComponent implements OnInit {
         console.log(error)
       }
     })
+  }
+
+  public searchMoviesByTitle(term: string) {
+    this.movieservice.getSearchMovie(term).subscribe({
+      next: (data: IMovies[]) => {
+        this.searchMovies = data;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
   }
 
 }
